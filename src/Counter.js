@@ -34,6 +34,7 @@ const Counter = () => {
       <h2>{count}</h2>
       <button onClick={onIncrease}>+</button>
       <button onClick={onDecrease}>-</button>
+      {/* 버튼 클릭시 증가/감소 */}
 
       <h2>{count2}</h2>
       <button onClick={onIncrease2}>+</button>
