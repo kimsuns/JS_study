@@ -7,11 +7,11 @@ import HandIcon from "./HandIcon";
 import Choice from "./Choice";
 
 
-function comMODE() {
-  const rsp = ['바위', '가위', '보']
-  const comChoice = rsp[Math.ceil(Math.random() * rsp.length)];
-  return comChoice;
-}
+// function comMODE() {
+//   const rsp = ['바위', '가위', '보']
+//   const comChoice = rsp[Math.ceil(Math.random() * rsp.length)];
+//   return comChoice;
+// }
 
 function App() {
   const [meClick, setMeClick] = useState('');
