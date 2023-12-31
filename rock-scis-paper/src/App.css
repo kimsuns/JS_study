@@ -1,0 +1,10 @@
+body {
+  background-color: #40089a;
+  color: #fff;
+}
+
+.icon {
+  /* display: flex; */
+  gap: 10px;
+
+}
