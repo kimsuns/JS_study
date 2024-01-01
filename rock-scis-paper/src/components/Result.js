@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Result = ({ meChoice }) => {
+const Result = ({ ourResult }) => {
 
   const WINS = {
     바위: '가위',
@@ -8,7 +8,7 @@ const Result = ({ meChoice }) => {
     보: '바위',
   }
 
-  const me = meChoice;
+  const me = ourResult.mine;
   // console.log(me);
   const other = '가위';
   // console.log(other);

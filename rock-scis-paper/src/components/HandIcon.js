@@ -1,6 +1,6 @@
-import rockImage from './assets/rock.svg';
-import scissorImage from './assets/scissor.svg';
-import paperImage from './assets/paper.svg';
+import rockImage from '../assets/rock.svg';
+import scissorImage from '../assets/scissor.svg';
+import paperImage from '../assets/paper.svg';
 
 import UserButton from './UserButton';
 import Result from './Result';
