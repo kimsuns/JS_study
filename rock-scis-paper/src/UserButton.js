@@ -9,16 +9,17 @@ const UserButton = ({ meButton }) => {
   return (
     <div>
       <button
-        className="hand"
+        name="rock"
+        value={'바위'}
         onClick={(e) => {
           meButton('바위')
-          console.log(e);
+
         }}
       >
         <HandIcon value="rock" />
       </button>
       <button
-        className="hand"
+        name="scissor"
         onClick={() => {
           meButton('가위')
         }}
@@ -27,7 +28,7 @@ const UserButton = ({ meButton }) => {
 
       </button>
       <button
-        className="hand"
+        name="paper"
         onClick={() => {
           meButton('보')
         }}

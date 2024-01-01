@@ -12,15 +12,20 @@ function comMODE() {
   const comChoice = rsp[Math.ceil(Math.random() * rsp.length)];
   return comChoice;
 }
+// 유틸 폴더에 넣어서 쓰기 
 
 function App() {
   const [meClick, setMeClick] = useState('');
   const [comClick, setComClick] = useState('');
+  
 
   const handleClick = () => {
     setMeClick(meClick);
     setComClick(comClick);
   };
+
+  // 값을 여러개 전달하고 싶으면 변수에 객체나 배열을 담아서 전달
+  // 동작을 여러개 전달하고 싶으면 함수로
 
 
   return (
@@ -29,8 +34,8 @@ function App() {
       <h1 id="title">가위바위보</h1>
       {meClick}
       <div>
-        <Choice meChoice={meClick} />
-        <Result meChoice={meClick} />
+        <Choice ChoiceContatiner={{ meClick: meClick, comClick: comClick }} />
+        <Result />
         <div className="icon">
           <UserButton meButton={setMeClick} />
 

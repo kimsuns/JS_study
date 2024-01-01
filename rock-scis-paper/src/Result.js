@@ -9,11 +9,11 @@ const Result = ({ meChoice }) => {
   }
 
   const me = meChoice;
-  console.log(me);
+  // console.log(me);
   const other = '가위';
-  console.log(other);
+  // console.log(other);
   const result = getResult(me, other);
-  console.log(result);
+  // console.log(result);
 
   function getResult(me, other) {
     if (WINS[me] === other) return '승리';
