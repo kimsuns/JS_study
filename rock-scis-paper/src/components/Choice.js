@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+/*
 const Choice = ({ ChoiceContatiner }) => {
   console.log(ChoiceContatiner);
 
@@ -15,3 +16,5 @@ const Choice = ({ ChoiceContatiner }) => {
 }
 
 export default Choice;
+
+*/

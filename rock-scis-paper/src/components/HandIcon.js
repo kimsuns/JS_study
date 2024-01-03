@@ -5,6 +5,8 @@ import paperImage from '../assets/paper.svg';
 import UserButton from './UserButton';
 import Result from './Result';
 
+
+/**
 const valueImage = {
   rock: rockImage,
   scissor: scissorImage,
@@ -19,10 +21,11 @@ const HandIcon = ({ value }) => {
 
       {/* <img src={rockImage} alt="rock" />
       <img src={scissorImage} alt="scissor" />
-      <img src={paperImage} alt="paper" /> */}
-    </div>
+      <img src={paperImage} alt="paper" /> */
+//     </div>
 
-  )
-}
+//   )
+// }
 
-export default HandIcon;
+// export default HandIcon;
+

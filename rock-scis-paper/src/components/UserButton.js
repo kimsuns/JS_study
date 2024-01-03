@@ -2,6 +2,22 @@ import { useState } from "react";
 import HandIcon from "./HandIcon";
 import { setSelectionRange } from "@testing-library/user-event/dist/utils";
 
+/*
+function UserButton() {
+
+
+  return (
+    
+  )
+
+}
+
+
+export default UserButton;
+
+*/
+/*
+
 const UserButton = ({ meButton }) => {
   // const [meClick, setMeClick] = useState('');
 
@@ -40,5 +56,4 @@ const UserButton = ({ meButton }) => {
 
   )
 }
-
-export default UserButton;
+*/
