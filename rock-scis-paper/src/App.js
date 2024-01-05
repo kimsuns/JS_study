@@ -1,54 +1,64 @@
 import "./App.css";
 import { useState } from "react";
-import UserButton from "./components/UserButton";
 import Result from "./components/Result";
+import HandIcon from "./components/HandIcon";
+import Button from "./components/Button";
 
+// import ResultHL from "./components/ResultHL";
 
 function App() {
-
-  const [userButton, setUserButton] = useState('');
-
-  // const rButton = () => {
-  //   setUserButton('scissor')
-  // }
-
-  // const sButton = () => {
-  //   setUserButton('rock')
-  // }
-
-  // const pButton = () => {
-  //   setUserButton('paper')
-  // }
+  const [userButton, setUserButton] = useState("");
+  const [recode, setRecode] = useState([]);
 
   const handleButton = (value) => {
-    setUserButton(value)
-    console.log(value)
+    setUserButton(value);
+    console.log(value);
+  };
 
-  }
+  const handleRecode = () => {
+    setRecode();
+  };
 
+  const handleClearClick = () => {
+    setRecode([]);
+  };
 
   return (
     <div className="App">
-      <h2>가위바위보</h2>
-      <div>
-        {userButton}
-        <Result userButton={userButton} />
-
+      <div className="game">
+        <div className="title">
+          <h2>가위바위보</h2>
+        </div>
+        <div>
+          <Result userButton={userButton} game="rsp" />
+        </div>
+        <div className="rspButton">
+          <button onClick={() => handleButton("scissor")}>
+            <HandIcon value="scissor" />
+          </button>
+          <button onClick={() => handleButton("rock")}>
+            <HandIcon value="rock" />
+          </button>
+          <button onClick={() => handleButton("paper")}>
+            <HandIcon value="paper" />
+          </button>
+          <div>
+            <Button onClick={handleClearClick}>처음부터</Button>
+          </div>
+        </div>
       </div>
 
-
-
-      <button onClick={() => handleButton('scissor')}>가위</button>
-      <button onClick={() => handleButton('rock')}>바위</button>
-      <button onClick={() => handleButton('paper')}>보</button>
-
+      <div className="game">
+        <div className="title">
+          <h2>결과 기록</h2>
+        </div>
+        <div>{recode}</div>
+      </div>
     </div>
   );
 }
 
 export default App;
-
-
 
 /*
 

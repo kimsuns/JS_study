@@ -1,31 +1,28 @@
-import rockImage from '../assets/rock.svg';
-import scissorImage from '../assets/scissor.svg';
-import paperImage from '../assets/paper.svg';
+import rockImage from "../assets/rock.svg";
+import scissorImage from "../assets/scissor.svg";
+import paperImage from "../assets/paper.svg";
 
-import UserButton from './UserButton';
-import Result from './Result';
+import "../css/HandIcon.css";
 
-
-/**
-const valueImage = {
-  rock: rockImage,
-  scissor: scissorImage,
-  paper: paperImage,
-};
+import UserButton from "./UserButton";
+import Result from "./Result";
 
 const HandIcon = ({ value }) => {
+  const valueImage = {
+    rock: rockImage,
+    scissor: scissorImage,
+    paper: paperImage,
+  };
 
   return (
-    <div>
+    <div className="rsp-img">
       <img src={valueImage[value]} alt="your choice" />
 
       {/* <img src={rockImage} alt="rock" />
       <img src={scissorImage} alt="scissor" />
-      <img src={paperImage} alt="paper" /> */
-//     </div>
+      <img src={paperImage} alt="paper" /> */}
+    </div>
+  );
+};
 
-//   )
-// }
-
-// export default HandIcon;
-
+export default HandIcon;
