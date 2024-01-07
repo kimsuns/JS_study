@@ -21,6 +21,7 @@ function Result(props) {
     } else {
       return "무승부";
     }
+    
   }
 
   return (

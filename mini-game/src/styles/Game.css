@@ -1,0 +1,33 @@
+.title {
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 10px;
+  /* flex-direction: column; */
+}
+
+.game_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  border: solid 1px;
+  border-radius: 15px;
+  width: 200px;
+  height: 300px;
+
+}
+
+.game_recode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+
+
+  border: solid 1px;
+  border-radius: 15px;
+}

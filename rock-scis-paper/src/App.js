@@ -12,7 +12,8 @@ function App() {
 
   const handleButton = (value) => {
     setUserButton(value);
-    console.log(value);
+    setRecode([...recode, ])
+
   };
 
   const handleRecode = () => {
@@ -23,6 +24,7 @@ function App() {
     setRecode([]);
   };
 
+  
   return (
     <div className="App">
       <div className="game">
