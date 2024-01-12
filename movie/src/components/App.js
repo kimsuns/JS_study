@@ -41,17 +41,14 @@ function App() {
       setIsLoading(true);
       setLoadingError(null);
       result = await getReviews(options);
-
     } catch (error) {
       setLoadingError(error);
       return;
-
     } finally {
       setIsLoading(false);
     }
     const { reviews, paging } = result;
-    if(options.offset === 0){
-
+    if (options.offset === 0) {
       setItems(reviews);
     } else {
       setItems((prevItems) => [...prevItems, ...reviews]);
@@ -62,15 +59,17 @@ function App() {
   };
 
   const handleLoadMore = () => {
-    handleLoad({order, offset, limit : LIMIT})
+    handleLoad({ order, offset, limit: LIMIT });
+  };
 
-  }
+  const handleSubmitSuccess = (review) => {
+    setItems((prevItems) => [review, ...prevItems]);
+  };
 
-  useEffect(()=> {
-    handleLoad({order, offset: 0, limit: LIMIT});
+  useEffect(() => {
+    handleLoad({ order, offset: 0, limit: LIMIT });
   }, [order]);
   // useEffect 함수에다 실행할 콜백 함수와 빈 배열을 넘겨주면 리액트는 콜백 함수를 맨 처음 렌더링할 때만 실행하기 떄문에 무한 루프가 생기는걸 막을 수 있음
-  
 
   return (
     <div className="App">
@@ -79,9 +78,13 @@ function App() {
         <button onClick={handleBestClick}>별점순</button>
         <button onClick={handleLoad}>초기화</button>
       </div>
-      <ReviewForm />
+      <ReviewForm onSubmitSuccess={handleSubmitSuccess} />
       <ReviewList items={sortedItems} onDelete={handleDelete} />
-      {hasNext && <button disabled={isLoading} onClick={handleLoadMore}>더보기</button>}
+      {hasNext && (
+        <button disabled={isLoading} onClick={handleLoadMore}>
+          더보기
+        </button>
+      )}
       {loadingError?.message && <span>{loadingError.message}</span>}
     </div>
   );
